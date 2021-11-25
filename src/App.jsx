@@ -2,12 +2,14 @@ import React from 'react'
 import Props, {Xt} from './components/Props'
 import Obj   from './components/Obj_props'
 import Func  from './components/Fun_props'
+import Est_count from './components/Est_count'
+import Est_auto  from './components/Est_auto'
 
 function App(){
 
     //por funcion
-    const saludar= ()=>{
-        alert('hola')
+    const saludar= (nombre)=>{
+        alert('hola '+ nombre)
     }
 
     //por objetos
@@ -29,7 +31,9 @@ function App(){
             <Props nombre= {nombre} edad= {edad}/>
             <Obj userInfo= {user}/>
             <Xt />
-            <Func saludar ={saludar}/>
+            <Func saludar ={saludar} m= {user}/>
+            <Est_count /> <br /> <br />
+            <Est_auto />
         </>
         
     )
